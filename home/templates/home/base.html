@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
+    <title>Home-Ensui Chen</title>
+</head>
+<body>
+    <header>
+        <nav class="nav collapsible">
+            <a href="/" class="header__logo" ><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon icon--primary" ></a>
+            <a href="/" class="header__brand">Ensui Chen</a>
+            <svg class="icon icon--primary nav__toggler">
+                <use xlink:href="{% static 'home/images/sprite.svg#menu' %}"></use>
+            </svg>
+            <ul class="list nav__list collapsible__content">
+                <li class="nav__item"><a href="#">home</a></li>
+                <li class="nav__item"><a href="#">projects</a></li>
+                <li class="nav__item"><a href="#">certifications</a></li>
+                <li class="nav__item"><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock content %}
+    <footer>
+        <section class="footer grid grid--1x2">
+            <div class="footer__brand">
+                <a href="https://github.com/echen770"><img src="{% static 'home/images/github.png' %}" alt=""></a>
+                <a href="https://www.facebook.com/ensui.chen/"><img src="{% static 'home/images/facebook.svg' %}" alt=""></a>
+                <a href="https://twitter.com/echen770"><img src="{% static 'home/images/twitter.svg' %}" alt=""></a>
+            </div>
+            <div class="grid grid--1x2">
+                <div class="footer__copyright">
+                    &copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Ensui Chen
+                    <div class="footer__credit">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="{% static 'home/js/main.js' %}"></script>
+</body>
+
+</html>
