@@ -1,16 +1,17 @@
-@import "./normalize.css";
+@import './normalize.css';
 
 :root {
-  --color-1: #f5f1f0;
+  /* --color-1: #f5f1f0;
   --color-2: #e2be2b;
   --color-3: #85a8a9;
   --color-4: #78663d;
-  --color-5: #353336;
+  --color-5: #353336; */
   --color-secondary: #78663d;
-  --color-primary: #85a8a9;
+  --color-primary: #3b4c4d;
   --color-accent: #e2be2b;
   --color-headings: #1b0760;
-  --color-body: #353336;
+  /* --color-body: #353336; */
+  --color-body: #10abc0;
   --color-body-dark: #f5f1f0;
   --color-border: #ccc;
   --border-radius: 3rem;
@@ -38,10 +39,6 @@ body {
   font-size: 2.4rem;
   line-height: 1.5;
   color: var(--color-body);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-height: 100vh;
   min-width: 500px;
 }
 
@@ -68,6 +65,15 @@ h3 {
 
 p {
   margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -154,6 +160,11 @@ a {
   width: 30px;
 }
 
+.icon--contact {
+  height: 20rem;
+  width: 20rem;
+}
+
 .icon-container {
   background: #f3f9fa;
   height: 64px;
@@ -167,7 +178,7 @@ a {
 /* Buttons */
 
 .btn {
-  border-radius: 4rem;
+  border-radius: 1rem;
   border-style: none;
   cursor: pointer;
   font-size: 1.8rem;
@@ -175,7 +186,6 @@ a {
   margin-bottom: 1rem;
   outline: none;
   padding: 2rem 4vw;
-  text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
 }
@@ -215,13 +225,13 @@ a {
 }
 
 .btn--outline {
-  background: white;
-  border: var(--color-headings) 2px solid;
-  color: var(--color-headings);
+  background: var(--color-body);
+  border: var(--color-accent) 2px solid;
+  color: var(--color-accent);
 }
 
 .btn--outline:hover {
-  background-color: var(--color-headings);
+  background-color: var(--color-accent);
   color: white;
 }
 
@@ -236,8 +246,9 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .btn {
-    font-size: 1.5rem;
+  .hero__btn {
+    font-size: 2rem;
+    padding: 2rem 0;
   }
 }
 
@@ -375,6 +386,9 @@ a {
 
 @media screen and (min-width: 768px) {
   .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-grow: 1;
   }
 }
@@ -382,6 +396,7 @@ a {
 /* Navigation Bar */
 
 .nav {
+  font-weight: 600;
   background-color: var(--color-body);
   display: flex;
   justify-content: space-between;
@@ -504,6 +519,10 @@ a {
   color: var(--color-secondary);
 }
 
+.footer__copyright {
+  color: white;
+}
+
 @media screen and (min-width: 768px) {
   .footer__brand {
     order: -1;
@@ -522,6 +541,7 @@ a {
 .hero__tagline {
   font-size: 2rem;
   color: var(--color-primary);
+  font-weight: 600;
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
 }
@@ -556,7 +576,29 @@ a {
     align-items: center;
   }
 
-  .hero__grid {
+  .hero__btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Contact */
+
+.contact__content > h1 {
+  color: var(--color-accent);
+}
+
+.contact__message {
+  font-size: 2rem;
+  color: var(--color-body-dark);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__content {
+    text-align: center;
     align-items: center;
   }
 }

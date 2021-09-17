@@ -2,16 +2,13 @@
 {% load static %}
 {% block content %}
     <section id="hero" class="block block--dark hero">
-        <div class="container">
+        <div class="container grid grid--1x2 hero__grid">
             <header class="block__header hero__content" >
-                <h1>Hi, I am Ensui Chen.</h1>
+                <h1>Certifications</h1>
                 <p class="hero__tagline">I design relational databases, and develop SQL queries.</p>
-                <div class="grid grid--1x2">
-                    <a href="{% url 'projects' %}" class="btn btn--outline hero__btn">projects</a>
-                    <a href="{% url 'certifications' %}" class="btn btn--outline hero__btn">certifications </a>
-                </div>
+                <a href="#" class="btn btn--accent">learn more</a>
             </header>
-            <!-- <picture class="hero__image">
+            <picture class="hero__image">
                 <source
                     type="image/webp"
                     srcset="{% static 'home/images/banner.webp' %} 1x, {% static 'home/images/banner@2x.webp' %} 2x"
@@ -21,7 +18,7 @@
                     srcset="{% static 'home/images/banner.jpg' %} 1x, {% static 'home/images/banner@2x.jpg' %} 2x"
                 />
                 <img class="hero__image" src="{% static 'home/images/banner.png' %}" alt="" />
-            </picture> -->
+            </picture>
         </div>
     </section>
 {% endblock content %}

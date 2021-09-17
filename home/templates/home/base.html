@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,21 +15,21 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
-    <title>Home-Ensui Chen</title>
+    <title>{{title}} - Ensui Chen</title>
 </head>
 <body>
     <header>
         <nav class="nav collapsible">
-            <a href="/" class="header__logo" ><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon icon--primary" ></a>
-            <a href="/" class="header__brand">Ensui Chen</a>
+            <a href="{% url 'home' %}" class="header__logo" ><img src="{% static 'home/images/logo.svg' %}" alt="" class="icon icon--primary" ></a>
+            <a href="{% url 'home' %}" class="header__brand">Ensui Chen</a>
             <svg class="icon icon--primary nav__toggler">
-                <use xlink:href="{% static 'home/images/sprite.svg#menu' %}"></use>
+                <use xlink:href="{% static 'home/images/sprite.svg' %}#menu"></use>
             </svg>
             <ul class="list nav__list collapsible__content">
-                <li class="nav__item"><a href="#">home</a></li>
-                <li class="nav__item"><a href="#">projects</a></li>
-                <li class="nav__item"><a href="#">certifications</a></li>
-                <li class="nav__item"><a href="#">contact</a></li>
+                <li class="nav__item"><a href="{% url 'home' %}">home</a></li>
+                <li class="nav__item"><a href="{% url 'projects' %}">projects</a></li>
+                <li class="nav__item"><a href="{% url 'certifications' %}">certifications</a></li>
+                <li class="nav__item"><a href="{% url 'contact' %}">contact</a></li>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+    <section id="hero" class="block block--dark hero">
+        <div class="container grid grid--1x2 hero__grid">
+            <header class="block__header contact__content" >
+                <h1>Send me a message...</h1>
+                <img src="{% static 'home/images/msg.svg' %}" class="icon--contact" alt="" >
+                <p class="contact__message">for a project, or just to say hi</p>
+            </header>
+            <div>
+                <a href="#" class="btn btn--accent">learn more</a>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
