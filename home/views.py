@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .forms import MessageForm
+from django.contrib import messages
 
 
 def home(request):
@@ -14,4 +16,14 @@ def certifications(request):
 
 
 def contact(request):
-    return render(request, "home/contact.html", {"title": "Contact"})
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f"Your message has been received.")
+            return redirect("home")
+    else:
+        form = MessageForm()
+    return render(
+        request, "home/contact.html", {"title": "Contact", "form": MessageForm}
+    )

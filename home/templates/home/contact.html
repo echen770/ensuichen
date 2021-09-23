@@ -2,14 +2,43 @@
 {% load static %}
 {% block content %}
     <section id="hero" class="block block--dark hero">
-        <div class="container grid grid--1x2 hero__grid">
-            <header class="block__header contact__content" >
-                <h1>Send me a message...</h1>
+        <div class="container grid contact__grid--1x2">
+            <header class="block__header contact__header" >
+                <h2>Leave a message...</h2>
                 <img src="{% static 'home/images/msg.svg' %}" class="icon--contact" alt="" >
                 <p class="contact__message">for a project, or just to say hi</p>
             </header>
-            <div>
-                <a href="#" class="btn btn--accent">learn more</a>
+            <div class="contact__content" >
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <fieldset class="contact__fieldset">
+                        <div class="grid grid--1x2">
+                            <div class="contact__grid_column">
+                                <label for="first_name" class="contact__form_field_label">{{form.first_name.label}}</label>
+                                {{form.first_name}}
+                            </div>
+                            <div class="contact__grid_column">
+                                <label for="last_name" class="contact__form_field_label">{{form.last_name.label}}</label>
+                                {{form.last_name}}
+                            </div>
+                        </div>
+                        <div class="grid grid--1x2">
+                            <div class="contact__grid_column">
+                                <label for="organization" class="contact__form_field_label">{{form.phone_number.label}}</label>
+                                {{form.phone_number}}
+                            </div>
+                            <div class="contact__grid_column">
+                                <label for="email" class="contact__form_field_label">{{form.email.label}}</label>
+                                {{form.email}}
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="contact__form_field_label">{{form.message.label}}</label>
+                            {{form.message}}
+                            <button class="btn btn--accent btn--contact" type="submit" >Send</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </section>
