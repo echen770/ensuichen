@@ -1,27 +1,72 @@
 {% extends 'home/base.html' %}
 {% load static %}
 {% block content %}
-    <section id="hero" class="block block--dark hero">
-        <div class="container">
-            <header class="block__header hero__content" >
-                <h1>Hi, I am Ensui Chen.</h1>
-                <p class="hero__tagline">I design relational databases, and develop SQL queries.</p>
-                <div class="grid grid--1x2">
-                    <a href="{% url 'projects' %}" class="btn btn--outline hero__btn">projects</a>
-                    <a href="{% url 'certifications' %}" class="btn btn--outline hero__btn">certifications </a>
-                </div>
-            </header>
-            <!-- <picture class="hero__image">
-                <source
-                    type="image/webp"
-                    srcset="{% static 'home/images/banner.webp' %} 1x, {% static 'home/images/banner@2x.webp' %} 2x"
-                />
-                <source
-                    type="image/png"
-                    srcset="{% static 'home/images/banner.jpg' %} 1x, {% static 'home/images/banner@2x.jpg' %} 2x"
-                />
-                <img class="hero__image" src="{% static 'home/images/banner.png' %}" alt="" />
-            </picture> -->
-        </div>
-    </section>
+<section class="slider">
+  <input type="radio" name="slider" checked='checked'>
+  <div class="imgBx">
+      <img src="{% static 'home/images/01.jpg' %}" alt="">
+      <div class="content">
+          <h2>Hi, I am Ensui Chen.</h2>
+          <p>I do projects in SQL, Python, HTML/CSS, JavaScript, Java, and more. <br> Click the dots below to view my hourney.</p>
+          <div class="grid grid--1x2 grid--home-btn" >
+              <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Message</a>
+              <a href="{% url 'certifications' %}" class="btn btn--outline btn__profile" >Certifications</a>
+          </div>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/02.jpg' %}" alt="">
+      <div class="content">
+          <h2>University of Wisconsin - Stevens Point</h2>
+          <p>2006: I graduated from UWSP with a bachelor degree and dual major in Computer Information Systems and Business Administration.</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/03.jpg' %}" alt="">
+      <div class="content">
+          <h2>University of Missouri</h2>
+          <p>2010: Master of Business Administration at the Truslake College of Business at Mizzou</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/04.jfif' %}" alt="">
+      <div class="content">
+          <h2>Programmer</h2>
+          <p>2007-2010: Worked as a programmer at the Truslake College of Business at MU. I design and build databases using Microsoft SQL Server and Microsoft Access. I have additional projects using ASP.NET and VB.NET.</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/05.jpg' %}" alt="">
+      <div class="content">
+          <h2>Marketing Specialist</h2>
+          <p>2011-2021: I worked for a medical device distribution company. My duties reaches far beyond marketing. Coming from a background in technology, I frequently suggested solutions involving a relational database and a web or MS Access front-end for analysis and reporting. I am also <span class="profile__text">knee</span> chest-deep in medical device quality system rules and regulations since I have to deal with them on a daily basis.</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/06.jpg' %}" alt="">
+      <div class="content">
+          <h2>I am curious</h2>
+          <p>2021- <span class="profile__text-symbol" >&infin;</span> : I never stop wondering what does it like to master a new technology. I learned Java. I built the site you are visiting using HTML/CSS and Django. I am working towards my Python certification. Some are motivated by work, some are just out of curiosity. There is a world of technologies out there and infinite possibilities...</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+  <input type="radio" name="slider">
+  <div class="imgBx">
+      <img src="{% static 'home/images/07.jpg' %}" alt="">
+      <div class="content">
+          <h2>Next</h2>
+          <p>- ?: If you are looking for someone to help in your journey, please click the button below to leave me a message.</p>
+          <a href="{% url 'contact' %}" class="btn btn--outline btn__profile" >Send Message</a>
+      </div>
+  </div>
+</section>
 {% endblock content %}

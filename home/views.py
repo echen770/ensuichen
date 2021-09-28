@@ -7,8 +7,8 @@ def home(request):
     return render(request, "home/home.html", {"title": "Home"})
 
 
-def projects(request):
-    return render(request, "home/projects.html", {"title": "Projects"})
+# def profile(request):
+#     return render(request, "home/profile.html", {"title": "Profile"})
 
 
 def certifications(request):

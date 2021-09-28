@@ -1,16 +1,17 @@
 {% extends 'home/base.html' %}
 {% load static %}
 {% block content %}
-    <section class="block block--dark">
+    <section class="block">
         <header class="block__header block__header_certification" >
             <h2>Certifications</h2>
+            <div class="certification__subtitle ">I am constantly growing my skill set.</div>
         </header>
         <div class="container container__certification">
             <div class="card card--secondary card--certification">
                 <header class="card__header card__header_certification">
                     <img src="{% static 'home/images/badge_mcsa.png' %}" class="icon__certification" alt="">
                     <div>
-                        <h3 class="plan__name">MCSA - SQL Server 2012/2014</h3>
+                        <h3 class="certification__name">MCSA - SQL Server 2012/2014</h3>
                         <span>Microsoft Certified Solution Associate</span>
                     </div>
                 </header>
@@ -27,7 +28,7 @@
                 <header class="card__header card__header_certification">
                     <img src="{% static 'home/images/badge_oca.svg' %}" class="icon__certification" alt="">
                     <div>
-                        <h3 class="plan__name">Java SE 7 Programmer</h3>
+                        <h3 class="certification__name">Java SE 7 Programmer</h3>
                         <span>Oracle Certified Associate</span>
                     </div>
                 </header>
